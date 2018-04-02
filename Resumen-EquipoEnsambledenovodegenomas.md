@@ -17,7 +17,7 @@ Figura 1. Ensamble de novo de genomas (Imagen de Nagarajan et al. Nat Rev Genet.
 La longitud de las reads todavía tiene importantes implicaciones bioinformáticas, ya que los algoritmos de ensamblaje optimizados para lecturas largas son fundamentalmente diferentes a los de lecturas cortas.
 Además, existen diferentes aspectos que pueden afectar la capacidad de reconstrucción de la secuencia original.
 
-De entre todos estos factores destacan los siguientes (Kisand et al.; 2013):
+De entre todos estos factores destacan los siguientes (Kisand et al., 2013):
 
 • La tecnología de secuenciación a emplear puede ser: Illumina, 454, SOLID, PacBio, Sanger.
 
