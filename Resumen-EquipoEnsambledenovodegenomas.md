@@ -1,6 +1,6 @@
 ##  Integrantes del equipo:
 Olivia Rojo  Nava
-Jetsi Viriana Mancilla Rojano
+ y Jetsi Viriana Mancilla Rojano
 
 
 # Ensamblaje de *novo* de genomas
@@ -42,6 +42,7 @@ Mate-pairs
 
 A través de mate -pairs y paired-end se maximiza la profundidad de cobertura, debido a que se obtienen contigs más grandes y una mayor precisión de la secuencia consenso final (Figura 2).
 ![resumen-equipoensamblajedenovo-fig2](https://user-images.githubusercontent.com/36114853/38179866-749dfa04-35ed-11e8-8aa1-a27f6ad928e9.jpg)
+
 Figura 2. Representación de la cobertura en una posición del genoma (Imagen de Nagarajan et al. Nat Rev Genet. 2013).
 
 • Los algoritmos de ensamblado y la capacidad de éstos para llevar a cabo la corrección de errores y la detección de secuencias repetidas.
@@ -114,6 +115,7 @@ Figura 3. Gráfico de Bruijn (Imagen de Nagarajan et al. Nat Rev Genet. 2013).
 
 
 Existe una cantidad de software disponible para el ensamblaje de novo de los datos de secuenciación de genoma (Figura 4)
+
 ![resumen-equipoensamblajedenovo-fig4](https://user-images.githubusercontent.com/36114853/38179892-c6e8ac14-35ed-11e8-8680-1c050578814c.png)
 
 Figura 4. Lista de ensambladores de novo, plataforma de secuenciación y algoritmo.
