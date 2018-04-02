@@ -1,6 +1,6 @@
 ##  Integrantes del equipo:
 Olivia Rojo  Nava
- y Jetsi Viriana Mancilla Rojano
+Jetsi Viriana Mancilla Rojano
 
 
 # Ensamblaje de *novo* de genomas
