@@ -1,35 +1,35 @@
-**Integrantes del equipo:**
+##  Integrantes del equipo:
+Olivia Rojo  Nava
+Jetsi Viriana Mancilla Rojano
 
-Olivia Rojo Nava
 
-Jetsi
-
-**Ensamblaje de novo de genomas**
+# Ensamblaje de *novo* de genomas
 
 Actualmente se han desarrollado diferentes métodos que nos brindan la ventaja de obtener el genoma completo de un organismo, lo anterior, nos permite poder contar con el inventario completo de genes de dicho organismo, mismos que se pueden llegar a expresar en cualquier momento de su ciclo. En bioinformática, el ensamblaje de secuencias es un proceso computacional que se basa en el alineamiento y unión de fragmentos cortos de DNA, los cuales provienen de un proceso de secuenciación, dando lugar a secuencias contiguas de mayor tamaño; permitiendo la reconstrucción exacta de la secuencia. El ensamble de secuencias se puede llevar a cabo utilizando un genoma como referencia, llamado ensamble por comparación; o bien, utilizando sólo la información obtenido de la secuenciación, para llevar a cabo la reconstrucción del genoma en cuestión, conocido como ensamble de novo. Generalmente la secuenciación de novo, permite secuenciar organismos nuevos, de los cuales no hay secuencias modelo o de referencia (Figura 1).
+
+![resumen-equipoensamblajedenovo-fig1](https://user-images.githubusercontent.com/36114853/38179646-57cd19a2-35eb-11e8-8a50-50382cecea99.jpg)
 
 Figura 1. Ensamble de novo de genomas (Imagen de Nagarajan et al. Nat Rev Genet. 2013)
 
 **1. ¿Cuáles son las principales variantes del método de laboratorio para generar mis datos y cuándo es más útil cada una?**
 
 -En cualquier proyecto en el que se considere llevar a cabo la secuenciación de un genoma, es importante considerar el tamaño aproximado del mismo, pues de esto dependerá principalmente la plataforma de secuenciación a utilizar.
-
 La longitud de las reads todavía tiene importantes implicaciones bioinformáticas, ya que los algoritmos de ensamblaje optimizados para lecturas largas son fundamentalmente diferentes a los de lecturas cortas.
-
 Además, existen diferentes aspectos que pueden afectar la capacidad de reconstrucción de la secuencia original.
 
 De entre todos estos factores destacan los siguientes (Kisand et al.; 2013):
 
 • La tecnología de secuenciación a emplear puede ser: Illumina, 454, SOLID, PacBio, Sanger.
 
-Cada una de estas plataformas puede tener diferentes equipos, niveles de rendimiento, números de lecturas y, por lo tanto, un costo diferente para cada reacción de secuenciación (Tabla 1 y 2).
-
 Tabla 1. Comparación de diferentes plataformas de secuenciación.
+
+![resumen-equipoensamblajedenovo-tab 1_1](https://user-images.githubusercontent.com/36114853/38179830-26d79208-35ed-11e8-9cf1-51467b2f0b6a.jpg)
 
 Tabla 2. Ventajas y Desventajas de cada plataforma.
 
-Tomado de : Garrido-Cardenas JA, Garcia-Maroto F, Alvarez-Bermejo JA, Manzano-Agugliaro F. DNA Sequencing Sensors: An Overview. Lobo-Castañón MJ, ed. Sensors (Basel, Switzerland). 2017;17(3):588. doi:10.3390/s17030588.
+![resumen-equipoensamblajedenovo-tabla2](https://user-images.githubusercontent.com/36114853/38179852-4bd1e46e-35ed-11e8-9f39-eacfa9a35768.png)
 
+Tomado de : Garrido-Cardenas JA, Garcia-Maroto F, Alvarez-Bermejo JA, Manzano-Agugliaro F. DNA Sequencing Sensors: An Overview. Lobo-Castañón MJ, ed. Sensors (Basel, Switzerland). 2017;17(3):588. doi:10.3390/s17030588.
 También se puede consultar: http://www.molecularecologist.com/next-gen-fieldguide-2016/ que brinda una descripción general de NGS.
 
 • El tipo de librería utilizada:
@@ -38,31 +38,22 @@ Single-end
 Paired-end
 Mate-pairs
 A través de mate -pairs y paired-end se maximiza la profundidad de cobertura, debido a que se obtienen contigs más grandes y una mayor precisión de la secuencia consenso final (Figura 2).
-
+![resumen-equipoensamblajedenovo-fig2](https://user-images.githubusercontent.com/36114853/38179866-749dfa04-35ed-11e8-8aa1-a27f6ad928e9.jpg)
 Figura 2. Representación de la cobertura en una posición del genoma (Imagen de Nagarajan et al. Nat Rev Genet. 2013).
 
 • Los algoritmos de ensamblado y la capacidad de éstos para llevar a cabo la corrección de errores y la detección de secuencias repetidas.
-
 • El rendimiento computacional: tiempo de ejecución y consumo de memoria. Para saber más sobre los recursos computacionales necesarios y el tamaño de los archivos de datos para las plataformas de secuenciación de ADN disponibles comercialmente, se puede consultar este sitio: http://www.molecularecologist.com/next-gen-table-3b-2014/
 
 **2 . De novo ¿Qué limitantes y posibles fuentes de error puede presentar este método (en el laboratorio o la bioinformática)?**
 
 De acuerdo con Monya Baker (2012), existen algunas de las siguientes limitantes y fuentes de error en el Ensamble de novo:
-
 Cuando el genoma de una especie se reagrupa por primera vez, nadie sabe qué es real o qué es lo que falta. En general, cuanto más grande sea el genoma, más errores habrá.
-
 Los secuenciadores de próxima generación pueden leer pares de bases a un costo costo mucho menos que usando la secuenciación de Sanger, pero las lecturas son mucho más cortas. Por lo que el reto consiste en ¿Cómo ensamblar genomas de alta calidad y cómo reconocerlo?.
-
 Los errores en el ensamblaje ocurren por muchas razones. A menudo se descartan incorrectamente repeticiones; o se llegan a hacer uniones u orientaciones en sitios equivocados y que pueden llegar a eliminar genes conservados entre diferentes organismos.
-
 Cada proyecto de ensamblaje es único en términos de estructura de datos generada y el genoma objetivo difiere, por ejemplo, en tamaño, composición de bases, contenido repetido.
-
 Secuencias repetidas: Las secuencias que contienen el mismo ADN repetitivo se ensamblan entre sí aun proviniendo de distintas regiones del genoma, pudiendo diferenciarlas sólo si contienen partes únicas dentro de su secuencia. Lo anterior genera que no se puedan ensamblar estas regiones, ya que se van a solapar con multitud de copias, lo que va a generar gaps y diferentes contigs. Cuando un ensamblador encuentra lecturas ligeramente diferentes entre sí, debe decidir si las lecturas se derivan del mismo locus o de regiones repetitivas. Las suposiciones erróneas pueden provocar que los ensambladores eliminen genes, particularmente miembros de familias de genes estrechamente relacionadas.
-
 Saber que las lecturas pareadas (pair-end) se generaron a partir de la misma pieza de ADN puede ayudar a vincular contigs en 'scaffolds', ordenando conjuntos de contigs con espacios intermedios. Los datos de lectura pareada también pueden indicar el tamaño de las regiones repetitivas y qué tan separados están los contigs.
-
 En ausencia de un genoma de referencia de alta calidad, los ensamblajes de novo del genoma a menudo se evalúan sobre la base del número de scafolds y contigs necesarios para representar el genoma, la proporción de lecturas que se pueden ensamblar, la longitud de contigs y scaffolds en relación con el tamaño del genoma.
-
 El número de "misassemblies" obtenidos en los contigs ensamblados puede ser debido a errores cometidos durante el proceso de secuenciación o a la formación de quimeras entre las lecturas.
 
 **¿Qué puede hacerse para amortiguarlos?**
@@ -104,11 +95,11 @@ Para el ensamblado de novo existen tres algoritmos principales:
 **2.	OVERLAP-LAYOUT-CONSENSUS.** Almacena y representa la información a través de grafos; lo anterior lo hace identificando los pares de lectura que se solapan de forma correcta. Al representar la información en un grafo, cada nodo representa una lectura y las conexiones unen las lecturas que se solapan.
 
 **3.	DE BRUIJN GRAPH.** Se basa en la relación entre sub-cadenas de nucleótidos de longitud K, los cuales son extraídas de las lecturas originales. Se basa en la coincidencia entre k-meros , corrigiendo errores y dando lugar a un ensamble de mayor calidad (Figura 3).
-
+![resumen-equipoenamblajedenovo-fig3](https://user-images.githubusercontent.com/36114853/38179875-99ad01d2-35ed-11e8-91e8-9379b377a72d.jpg)
 Figura 3. Gráfico de Bruijn (Imagen de Nagarajan et al. Nat Rev Genet. 2013).
 
 Existe una cantidad de software disponible para el ensamblaje de novo de los datos de secuenciación de genoma (Figura 4)
-
+![resumen-equipoensamblajedenovo-fig4](https://user-images.githubusercontent.com/36114853/38179892-c6e8ac14-35ed-11e8-8680-1c050578814c.png)
 Figura 4. Lista de ensambladores de novo, plataforma de secuenciación y algoritmo.
 
 El ensamblador de novo Velvet, está basado en la construcción de grafos de Bruijn. El ensamblador Velvet puede ensamblar cualquier tipo de lecturas, pero en realidad está diseñado para el ensamblado de lecturas cortas que van desde 25 – 50 pb. Es uno de los más utilizados en el ensamblado de genomas bacterianos secuenciados previamente con la plataforma Illumina. Además, la principal ventaja de este ensamblador es que puede eliminar errores producidos por el experimento de secuenciación y resuelve repeticiones causadas por la complejidad del genoma (Nagarajan y Pop, 2013).
